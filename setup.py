@@ -16,7 +16,8 @@ setup(
     version=VERSION,
     description="utilities to manage bluepyopt jobs on the nsg-portal",
     license="apache 2.0",
-    install_requires=[
+    install_requires=['requests',
+                      'lxml',
     ],
     packages=find_packages(),
     classifiers=[
