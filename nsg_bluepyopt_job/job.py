@@ -90,6 +90,6 @@ def download_output(output_url, user, password, tmp_dir):
     checkpoint_path = os.path.join(tmp_dir, 'checkpoint.pkl')
     L.debug('checkpoint_path: %s', checkpoint_path)
     with open(checkpoint_path, 'wb') as checkpoint:
-        file_checkpoint = f.extractfile(tar_info)
-        checkpoint.write(file_checkpoint.buffer)
+        file_checkpoint = f.extractfile(tar_info).read()
+        checkpoint.write(file_checkpoint)
     return checkpoint_path
